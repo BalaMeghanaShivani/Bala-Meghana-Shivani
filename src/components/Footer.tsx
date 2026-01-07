@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <footer className="py-8 px-6 text-center">
-      <p className="mono text-sm text-muted-foreground">
-        Designed & Built by Bala Meghana Shivani
+    <footer className="py-8 px-6 text-center border-t border-border">
+      <p className="text-sm text-muted-foreground">
+        © {new Date().getFullYear()} Bala Meghana Shivani. Built with React & Tailwind.
       </p>
     </footer>
   );
