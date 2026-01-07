@@ -1,87 +1,78 @@
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Building2, Calendar } from "lucide-react";
 
 const experiences = [
   {
     company: "Accenture",
     role: "Data Engineering Associate",
-    location: "Hyderabad, Telangana",
-    period: "July 2022 – July 2023",
-    points: [
-      "Designed and implemented distributed ETL pipelines for 1M+ telecom records using Python and SQL on Apache Airflow, reducing data latency by 20%",
-      "Developed a high-performance forecasting engine leveraging Python (XGBoost + LSTM) to model seasonal demand, increasing prediction accuracy by 18%",
-      "Created Tableau dashboards to analyze telecommunication data, enhancing decision-making efficiency by 30% for senior management",
-      "Collaborated with cross-functional teams to translate complex business requirements into effective prompts for LLMs, resulting in a 30% faster project completion rate"
+    location: "Hyderabad, India",
+    period: "Jul 2022 – Jul 2023",
+    highlights: [
+      "Built ETL pipelines processing 1M+ telecom records → 20% latency reduction",
+      "Developed forecasting engine (XGBoost + LSTM) → 18% accuracy improvement",
+      "Created Tableau dashboards → 30% faster decision-making",
     ]
   },
   {
     company: "Verzeo",
-    role: "Machine Learning Engineer Intern",
-    location: "Hyderabad, Telangana",
-    period: "May 2020 – July 2020",
-    points: [
-      "Developed and deployed a BiLSTM-based deep learning model using PyTorch to predict student dropout risk in online courses, reducing churn by 22%",
-      "Conducted SQL-based A/B testing on a 10K-user cohort; validated results with t-tests and Chi-square tests, resulting in a 15% increase in weekly active users"
+    role: "ML Engineer Intern",
+    location: "Hyderabad, India",
+    period: "May 2020 – Jul 2020",
+    highlights: [
+      "Built BiLSTM model for student dropout prediction → 22% churn reduction",
+      "Ran SQL-based A/B tests on 10K users → 15% increase in active users",
     ]
   }
 ];
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-6 md:px-12 lg:px-24">
+    <section id="experience" className="py-20 px-6 md:px-12 lg:px-24">
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
         className="max-w-4xl mx-auto"
       >
-        <h2 className="section-heading">
-          <span className="mono text-primary text-xl">02.</span>
-          <span>Experience</span>
-        </h2>
+        <h2 className="section-heading text-center">Experience</h2>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border" />
-
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-8 md:pl-20"
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-8 -translate-x-1/2 w-3 h-3 rounded-full bg-primary glow" />
-
-                <div className="glass-card p-6 hover:border-primary/50 transition-colors">
-                  <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold">
-                        {exp.role}{" "}
-                        <span className="text-primary">@ {exp.company}</span>
-                      </h3>
-                      <p className="text-sm text-muted-foreground">{exp.location}</p>
-                    </div>
-                    <span className="mono text-sm text-muted-foreground">{exp.period}</span>
+        <div className="space-y-6">
+          {experiences.map((exp, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-background rounded-xl p-6 border border-border card-hover"
+            >
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold text-foreground">
+                    {exp.role}
+                  </h3>
+                  <div className="flex items-center gap-2 text-primary font-medium">
+                    <Building2 size={16} />
+                    {exp.company}
                   </div>
-
-                  <ul className="space-y-3">
-                    {exp.points.map((point, i) => (
-                      <li key={i} className="flex gap-3 text-muted-foreground">
-                        <span className="text-primary mt-1.5 flex-shrink-0">▹</span>
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Calendar size={14} />
+                  {exp.period}
+                </div>
+              </div>
+
+              <ul className="space-y-2">
+                {exp.highlights.map((point, i) => (
+                  <li key={i} className="flex gap-3 text-muted-foreground">
+                    <span className="text-primary mt-1">→</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
         </div>
       </motion.div>
     </section>

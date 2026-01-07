@@ -1,105 +1,65 @@
 import { motion } from "framer-motion";
+import { GraduationCap, MapPin, Briefcase } from "lucide-react";
 
 const About = () => {
+  const highlights = [
+    { icon: GraduationCap, label: "M.S. Statistics", detail: "San Jose State University" },
+    { icon: MapPin, label: "San Jose, CA", detail: "Open to relocation" },
+    { icon: Briefcase, label: "Seeking Roles", detail: "Data Science • ML • AI" },
+  ];
+
+  const techStack = [
+    "Python", "PyTorch", "TensorFlow", "LangChain", "GPT-4", "RAG", 
+    "SQL", "FastAPI", "Docker", "AWS", "Tableau", "Airflow"
+  ];
+
   return (
-    <section id="about" className="py-24 px-6 md:px-12 lg:px-24">
+    <section id="about" className="py-20 px-6 md:px-12 lg:px-24 bg-muted/30">
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="max-w-4xl mx-auto"
+        transition={{ duration: 0.5 }}
+        className="max-w-5xl mx-auto"
       >
-        <h2 className="section-heading">
-          <span className="mono text-primary text-xl">01.</span>
-          <span>About Me</span>
-        </h2>
+        <h2 className="section-heading text-center">About Me</h2>
 
-        <div className="grid md:grid-cols-3 gap-12">
-          <div className="md:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
-            <p>
-              Hello! I'm Shivani, a passionate Data Engineer and AI enthusiast based in San Jose, California.
-              Currently pursuing my <span className="text-highlight">Master's in Statistics</span> at San Jose
-              State University, I combine statistical rigor with cutting-edge AI/ML technologies to build
-              impactful solutions.
-            </p>
-            <p>
-              My journey started at <span className="text-highlight">Accenture</span>, where I designed
-              distributed ETL pipelines processing 1M+ telecom records and developed forecasting engines
-              that increased prediction accuracy by 18%. I've since expanded into the exciting world of
-              Generative AI and multi-agent systems.
-            </p>
-            <p>
-              Here are some technologies I've been working with recently:
-            </p>
+        <p className="text-center text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
+          Data professional with expertise in building <span className="text-highlight">ML pipelines</span>, 
+          <span className="text-highlight"> Generative AI</span> systems, and <span className="text-highlight">data-driven solutions</span> that drive business impact.
+        </p>
 
-            <ul className="grid grid-cols-2 gap-2 mono text-sm mt-4">
-              {[
-                "Python",
-                "PyTorch & TensorFlow",
-                "LangChain & LangGraph",
-                "GPT-4 & LLaMA",
-                "FastAPI",
-                "Apache Airflow",
-                "RAG Systems",
-                "Docker & Kubernetes"
-              ].map((skill) => (
-                <li key={skill} className="flex items-center gap-2">
-                  <span className="text-primary">▹</span>
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="relative group">
-            <div className="relative z-10 rounded-lg overflow-hidden glass-card p-1">
-              <div className="bg-gradient-to-br from-primary/20 to-accent/10 rounded-lg aspect-square flex items-center justify-center">
-                <span className="text-6xl font-bold gradient-text">BMS</span>
-              </div>
-            </div>
-            <div className="absolute -inset-4 bg-primary/10 rounded-lg blur-xl opacity-50 group-hover:opacity-70 transition-opacity -z-10" />
-          </div>
+        {/* Quick Info Cards */}
+        <div className="grid md:grid-cols-3 gap-4 mb-12">
+          {highlights.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              className="bg-background rounded-xl p-5 border border-border text-center card-hover"
+            >
+              <item.icon className="w-8 h-8 text-primary mx-auto mb-3" />
+              <p className="font-semibold text-foreground">{item.label}</p>
+              <p className="text-sm text-muted-foreground">{item.detail}</p>
+            </motion.div>
+          ))}
         </div>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="glass-card p-6"
-          >
-            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-              <span className="text-primary">🎓</span>
-              Education
-            </h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-medium">San Jose State University</p>
-                <p className="text-sm text-muted-foreground">M.S. in Statistics • 2023 - 2025</p>
-              </div>
-              <div>
-                <p className="font-medium">Anurag Group Of Institutions</p>
-                <p className="text-sm text-muted-foreground">B.E. in Computer Science • 2018 - 2022</p>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="glass-card p-6"
-          >
-            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-              <span className="text-primary">📍</span>
-              Location
-            </h3>
-            <p className="text-muted-foreground">San Jose, California</p>
-            <p className="text-sm text-muted-foreground mt-1">Open to opportunities in the Bay Area</p>
-          </motion.div>
+        {/* Tech Stack */}
+        <div className="text-center">
+          <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide">Core Technologies</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {techStack.map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-2 rounded-full bg-background border border-border text-sm font-medium text-foreground hover:border-primary hover:text-primary transition-colors"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
       </motion.div>
     </section>
