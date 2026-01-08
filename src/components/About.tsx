@@ -5,7 +5,7 @@ const About = () => {
   const highlights = [
     { icon: GraduationCap, label: "M.S. Statistics", detail: "San Jose State University" },
     { icon: MapPin, label: "San Jose, CA", detail: "Open to relocation" },
-    { icon: Briefcase, label: "Seeking Roles", detail: "Data Science • ML • AI" },
+    { icon: Briefcase, label: "Seeking Roles", detail: "Data Science • ML • AI • Data Analyst • Data Engineer" },
   ];
 
   const techStack = [

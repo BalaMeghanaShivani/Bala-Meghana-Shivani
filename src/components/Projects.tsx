@@ -1,30 +1,38 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Bot, Users, BarChart3 } from "lucide-react";
+import { Github, Bot, Users, BarChart3, FlaskConical } from "lucide-react";
 
 const projects = [
   {
     title: "MindBot",
     subtitle: "Dual-Agent AI Journaling System",
-    description: "Multi-agent system with empathetic Companion + analytical Historian agents for personalized mental wellness insights.",
-    tech: ["GPT-4", "FastAPI", "LangChain", "Chroma DB"],
+    description: "Problem: Lack of personalized mental wellness insights from journal entries. Built multi-agent GenAI system with empathetic Companion + analytical Historian agents using GPT-4, LangChain, and RAG. Impact: 85% user engagement, 40% faster insight generation via vector similarity search in Chroma DB.",
+    tech: ["GPT-4", "FastAPI", "LangChain", "RAG", "Chroma DB", "Python"],
     github: "https://github.com/devamsheth0806/MindBot",
     icon: Bot,
   },
   {
     title: "TaskForge",
     subtitle: "AI Team Collaboration Platform",
-    description: "Multi-agent platform with PM, Researcher, Coder, and Reviewer agents collaborating via WebSockets.",
-    tech: ["React", "TypeScript", "FastAPI", "MongoDB"],
+    description: "Problem: Manual coordination across PM, research, coding, and review workflows. Built multi-agent orchestration platform with specialized agents (PM, Researcher, Coder, Reviewer) collaborating via WebSockets. Impact: 60% reduction in task completion time, real-time collaboration across 4+ agent roles.",
+    tech: ["React", "TypeScript", "FastAPI", "MongoDB", "WebSockets", "Multi-Agent AI"],
     github: "https://github.com/BalaMeghanaShivani/taskforge",
     icon: Users,
   },
   {
     title: "SplitSight",
-    subtitle: "Expense Analytics Dashboard",
-    description: "Intelligent expense tracking with advanced visualization for personal finance insights.",
-    tech: ["Python", "Data Viz", "Analytics"],
+    subtitle: "See Both Sides",
+    description: "SplitSight is a research tool that helps users explore both sides of any topic. It uses Perplexity's Sonar model to pull real-time, cited arguments for and against a given idea. Built with Streamlit for interactive exploration of diverse perspectives on complex topics.",
+    tech: ["Python", "Streamlit", "Perplexity API", "LLM", "Research Tools"],
     github: "https://github.com/BalaMeghanaShivani/Splitsight",
     icon: BarChart3,
+  },
+  {
+    title: "Parsimonious Power Fuzzy Clustering",
+    subtitle: "Research Project",
+    description: "Research project developing novel power-regularized fuzzy c-means (pFCM) clustering algorithm with fuzzification parameter less than one. Enhances clustering accuracy and robustness for complex data patterns. Implemented in Python with NumPy and SciPy for efficient computation.",
+    tech: ["Python", "NumPy", "SciPy", "Machine Learning", "Clustering", "Research"],
+    github: "https://github.com/BalaMeghanaShivani/parsimonious-power-fuzzy-clustering",
+    icon: FlaskConical,
   }
 ];
 

@@ -13,7 +13,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-primary font-medium mb-4 text-sm tracking-wide uppercase">
-              Data Scientist • ML Engineer • AI Specialist
+              Data Scientist • ML Engineer • ML/AI Engineer and Data Analyst
             </p>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
@@ -22,25 +22,9 @@ const Hero = () => {
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-              M.S. Statistics @ <span className="text-highlight">San Jose State University</span>. 
+              MS Statistics graduate from <span className="text-highlight">San Jose State University</span>. 
               Building intelligent systems with ML, GenAI, and data engineering.
             </p>
-
-            {/* Key Stats - Recruiter Friendly */}
-            <div className="flex flex-wrap gap-6 mb-8">
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">1M+</p>
-                <p className="text-xs text-muted-foreground">Records Processed</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">18%</p>
-                <p className="text-xs text-muted-foreground">Accuracy Improvement</p>
-              </div>
-              <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">3+</p>
-                <p className="text-xs text-muted-foreground">AI Projects</p>
-              </div>
-            </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 items-center">
@@ -100,11 +84,13 @@ const Hero = () => {
             className="relative flex justify-center lg:justify-end"
           >
             <div className="relative">
-              {/* Profile Photo Placeholder */}
+              {/* Profile Photo */}
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border border-border shadow-xl">
-                <div className="w-full h-full flex items-center justify-center bg-muted">
-                  <span className="text-6xl md:text-7xl font-bold gradient-text">BMS</span>
-                </div>
+                <img 
+                  src="/profile-picture.jpg" 
+                  alt="Shivani" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative Elements */}
               <div className="absolute -bottom-4 -right-4 w-64 h-64 md:w-80 md:h-80 rounded-2xl border-2 border-primary/20 -z-10" />
