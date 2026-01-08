@@ -9,7 +9,7 @@ const About = () => {
   ];
 
   const techStack = [
-    "Python", "PyTorch", "TensorFlow", "LangChain", "GPT-4", "RAG", 
+    "Python", "PyTorch", "TensorFlow", "LangChain", "GPT-4", "RAG",
     "SQL", "FastAPI", "Docker", "AWS", "Tableau", "Airflow"
   ];
 
@@ -24,10 +24,14 @@ const About = () => {
       >
         <h2 className="section-heading text-center">About Me</h2>
 
-        <p className="text-center text-muted-foreground text-lg max-w-2xl mx-auto mb-12">
-          Data professional with expertise in building <span className="text-highlight">ML pipelines</span>, 
-          <span className="text-highlight"> Generative AI</span> systems, and <span className="text-highlight">data-driven solutions</span> that drive business impact.
+        <p className="text-center text-muted-foreground text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+          Data professional with expertise spanning <span className="text-highlight">analytics</span>,
+          <span className="text-highlight"> machine learning</span>, and <span className="text-highlight">data engineering</span>.
+          Experienced in building ETL pipelines, developing ML models, and creating data-driven solutions that drive business impact.
+          Strong foundation in statistics, SQL, Python, and modern AI frameworks, with hands-on experience in both industry and academic settings.
         </p>
+
+
 
         {/* Quick Info Cards */}
         <div className="grid md:grid-cols-3 gap-4 mb-12">

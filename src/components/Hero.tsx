@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowRight, Download } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight, Download, Briefcase, Code, Brain, Users } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="text-primary font-medium mb-4 text-sm tracking-wide uppercase">
-              Data Scientist • ML Engineer • ML/AI Engineer and Data Analyst
+              Data Scientist • ML/AI Engineer
             </p>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 leading-tight">
@@ -22,9 +22,41 @@ const Hero = () => {
             </h1>
 
             <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-8 leading-relaxed">
-              MS Statistics graduate from <span className="text-highlight">San Jose State University</span>. 
-              Building intelligent systems with ML, GenAI, and data engineering.
+              MS Statistics graduate from <span className="text-highlight">San Jose State University</span>.
+              From raw data to decisions — engineering ML and AI systems end-to-end
             </p>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              <div className="bg-background/50 backdrop-blur-sm rounded-lg p-3 border border-border text-center hover:border-primary transition-colors group">
+                <div className="flex justify-center mb-2">
+                  <Briefcase className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <p className="text-xl font-bold text-foreground">1+</p>
+                <p className="text-xs text-muted-foreground">Years Industry Experience</p>
+              </div>
+              <div className="bg-background/50 backdrop-blur-sm rounded-lg p-3 border border-border text-center hover:border-primary transition-colors group">
+                <div className="flex justify-center mb-2">
+                  <Code className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <p className="text-xl font-bold text-foreground">15+</p>
+                <p className="text-xs text-muted-foreground">Technical Skills</p>
+              </div>
+              <div className="bg-background/50 backdrop-blur-sm rounded-lg p-3 border border-border text-center hover:border-primary transition-colors group">
+                <div className="flex justify-center mb-2">
+                  <Brain className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <p className="text-xl font-bold text-foreground">12+</p>
+                <p className="text-xs text-muted-foreground">Analytics, ML & GenAI Projects</p>
+              </div>
+              <div className="bg-background/50 backdrop-blur-sm rounded-lg p-3 border border-border text-center hover:border-primary transition-colors group">
+                <div className="flex justify-center mb-2">
+                  <Users className="w-5 h-5 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <p className="text-xl font-bold text-foreground">3</p>
+                <p className="text-xs text-muted-foreground">Professional Roles</p>
+              </div>
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 items-center">
@@ -36,7 +68,7 @@ const Hero = () => {
                 <ArrowRight size={18} />
               </a>
               <a
-                href="/Bala_Shivani_Resume.pdf"
+                href="Bala_Shivani_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium hover:bg-muted transition-colors"
@@ -86,9 +118,9 @@ const Hero = () => {
             <div className="relative">
               {/* Profile Photo */}
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border border-border shadow-xl">
-                <img 
-                  src="/profile-picture.jpg" 
-                  alt="Shivani" 
+                <img
+                  src="profile-picture.jpg"
+                  alt="Shivani"
                   className="w-full h-full object-cover"
                 />
               </div>
