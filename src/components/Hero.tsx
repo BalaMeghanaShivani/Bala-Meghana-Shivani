@@ -68,7 +68,7 @@ const Hero = () => {
                 <ArrowRight size={18} />
               </a>
               <a
-                href="Bala_Shivani_Resume.pdf"
+                href="/Bala_Shivani_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium hover:bg-muted transition-colors"
@@ -119,7 +119,7 @@ const Hero = () => {
               {/* Profile Photo */}
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden bg-gradient-to-br from-primary/10 to-accent/10 border border-border shadow-xl">
                 <img
-                  src="profile-picture.jpg"
+                  src="/profile-picture.jpg"
                   alt="Shivani"
                   className="w-full h-full object-cover"
                 />
